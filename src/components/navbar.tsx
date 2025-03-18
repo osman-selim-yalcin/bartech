@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <nav className="bg-[#FFD700] text-[#000000] p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-lg bg-secondary font-bold">
-          Logo
+        <Link to="/" className="text-lg bg-secondary font-bold ">
+          BARTECH
         </Link>
         <div className="space-x-4">
           <Link to="/products" className="hover:text-gray-700">
