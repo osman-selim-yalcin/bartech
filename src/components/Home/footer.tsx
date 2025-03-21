@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
           <div>
             <p className="font-semibold text-[#FFD700]">E-Posta</p>
-            <p>example@example.com</p>
+            <p>west-bartech@hotmail.com</p>
           </div>
           <div>
             <p className="font-semibold text-[#FFD700]">Telefon</p>
