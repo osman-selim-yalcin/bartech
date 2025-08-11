@@ -5,3 +5,37 @@
   --font-openSans: "OpenSans", open-sans;
   --font-poppins: "Poppins", poppins;
 }
+
+/* Swiper arrows & pagination */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffd700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+.swiper-pagination-bullet-active {
+  background: #ffd700;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: #ffd700;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link--active::after {
+  width: 100%;
+}
