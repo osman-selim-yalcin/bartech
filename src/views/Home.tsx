@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi";
-import { Link } from "react-router-dom";
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 
@@ -69,21 +67,6 @@ const HomePage = () => {
               1995'ten beri yenilikçi çözümler, hızlı servis ve güçlü
               referanslarla yanınızdayız.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 rounded-full bg-[#FFD700] text-black px-5 py-3 font-semibold hover:opacity-90"
-              >
-                Ürünleri Gör <FiArrowRight />
-              </Link>
-              <a
-                href="https://wa.me/905323150744"
-                target="_blank"
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 text-white px-5 py-3 font-semibold hover:border-[#FFD700] hover:text-[#FFD700]"
-              >
-                Hemen Yaz
-              </a>
-            </div>
           </div>
         </div>
       </section>
