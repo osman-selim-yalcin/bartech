@@ -10,9 +10,9 @@ const MainRoutes: FC = observer(() => {
     <BrowserRouter>
       <Routes>
         <Route element={<App />}>
-        <Route path="/products" element={<Products />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/*" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/*" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

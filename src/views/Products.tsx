@@ -1,5 +1,3 @@
-import Navbar from "../components/navbar";
-
 const products = [
   {
     id: 1,
@@ -21,9 +19,6 @@ const products = [
 const Products = () => {
   return (
     <div className="font-poppins bg-white text-black">
-      {/* Navbar */}
-      <Navbar />
-
       {/* Ürünler */}
       <div className="container mx-auto px-4 py-8">
         {products.map((product, index) => (
