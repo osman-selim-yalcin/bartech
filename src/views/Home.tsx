@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Swiper from "swiper/bundle";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 const HomePage = () => {
+  const swiperRef = useRef<Swiper | null>(null);
+
   const images = [
     "/images/image0.jpeg",
     "/images/image4.jpeg",
@@ -21,7 +24,8 @@ const HomePage = () => {
   ];
 
   useEffect(() => {
-    new Swiper(".hero-swiper", {
+    swiperRef.current = new Swiper(".hero-swiper", {
+      modules: [Autoplay, Navigation],
       slidesPerView: 1,
       spaceBetween: 10,
       loop: true,
@@ -29,11 +33,21 @@ const HomePage = () => {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      speed: 700,
       breakpoints: {
         640: { slidesPerView: 1, spaceBetween: 10 },
         1024: { slidesPerView: 1, spaceBetween: 10 },
       },
     });
+
+    return () => {
+      swiperRef.current?.destroy(true, true);
+      swiperRef.current = null;
+    };
   }, []);
 
   return (
